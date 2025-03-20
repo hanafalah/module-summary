@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Zahzah\ModuleSummary;
-use Zahzah\LaravelSupport\Providers\BaseServiceProvider;
+namespace Hanafalah\ModuleSummary;
+
+use Hanafalah\LaravelSupport\Providers\BaseServiceProvider;
 
 class ModuleSummaryServiceProvider extends BaseServiceProvider
 {
@@ -15,12 +16,13 @@ class ModuleSummaryServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->registerMainClass(ModuleSummary::class)
-             ->registerCommandService(Providers\CommandServiceProvider::class)
-             ->registers([
-                '*','Services' => function(){
+            ->registerCommandService(Providers\CommandServiceProvider::class)
+            ->registers([
+                '*',
+                'Services' => function () {
                     $this->binds([
                         Contracts\ModuleSummary::class => ModuleSummary::class,
-                        Contracts\Summary::class       => Schemas\Summary::class 
+                        Contracts\Summary::class       => Schemas\Summary::class
                     ]);
                 }
             ]);
@@ -31,11 +33,13 @@ class ModuleSummaryServiceProvider extends BaseServiceProvider
      *
      * @return string
      */
-    protected function dir(): string{
-        return __DIR__.'/';
+    protected function dir(): string
+    {
+        return __DIR__ . '/';
     }
 
-    protected function migrationPath(string $path = ''): string{
+    protected function migrationPath(string $path = ''): string
+    {
         return database_path($path);
     }
 }

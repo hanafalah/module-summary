@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Zahzah\ModuleSummary\Providers;
+namespace Hanafalah\ModuleSummary\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Zahzah\ModuleSummary\Commands;
+use Hanafalah\ModuleSummary\Commands;
 
 class CommandServiceProvider extends ServiceProvider
 {
@@ -14,8 +14,9 @@ class CommandServiceProvider extends ServiceProvider
     ];
 
 
-    public function register(){
-        $this->commands(config('module-summary.commands',$this->commands));
+    public function register()
+    {
+        $this->commands(config('module-summary.commands', $this->commands));
     }
     /**
      * Get the services provided by the provider.

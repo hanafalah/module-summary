@@ -1,10 +1,7 @@
 <?php
 
-namespace Zahzah\ModuleSummary\Contracts;
+namespace Hanafalah\ModuleSummary\Contracts;
 
-use Zahzah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
 
-interface Summary extends DataManagement
-{
-    
-}
+interface Summary extends DataManagement {}

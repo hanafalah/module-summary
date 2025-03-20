@@ -1,8 +1,8 @@
 {
-    "name": "zahzah/module-summary",
+    "name": "hanafalah/module-summary",
     "autoload": {
         "psr-4": {
-            "Zahzah\\ModuleSummary\\": "src/"
+            "Hanafalah\\ModuleSummary\\": "src/"
         }
     },
     "authors": [
@@ -14,13 +14,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Zahzah\\ModuleSummary\\ModuleSummaryServiceProvider"
+                "Hanafalah\\ModuleSummary\\ModuleSummaryServiceProvider"
             ]
         }
     },
     "require": {
-        "zahzah/laravel-has-props": "2.x",
-        "zahzah/laravel-support": "2.x"
+        "hanafalah/laravel-has-props": "2.x",
+        "hanafalah/laravel-support": "2.x"
     },
     "minimum-stability": "dev",
     "prefer-stable": false

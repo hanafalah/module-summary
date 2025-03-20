@@ -1,20 +1,22 @@
 <?php
 
-namespace Zahzah\ModuleSummary\Schemas;
+namespace Hanafalah\ModuleSummary\Schemas;
 
-use Zahzah\ModuleSummary\{
+use Hanafalah\ModuleSummary\{
     Supports\BaseModuleSummary
 };
-use Zahzah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
 
-class Summary extends BaseModuleSummary implements DataManagement{
-    public function booting(): self{
+class Summary extends BaseModuleSummary implements DataManagement
+{
+    public function booting(): self
+    {
         static::$__class = $this;
-        static::$__model = $this->{$this->__entity."Model"}();
+        static::$__model = $this->{$this->__entity . "Model"}();
         return $this;
-}
+    }
 
-protected array $__guard   = ['id', 'parent_id', 'reference_type', 'reference_id']; 
+    protected array $__guard   = ['id', 'parent_id', 'reference_type', 'reference_id'];
     protected array $__add     = ['status'];
     protected string $__entity = 'Summary';
 
@@ -27,9 +29,9 @@ protected array $__guard   = ['id', 'parent_id', 'reference_type', 'reference_id
      *
      * @return \Illuminate\Database\Eloquent\Model The API access model.
      */
-    public function addOrChange(? array $attributes=[]): self{    
-        $this->updateOrCreate($attributes);   
+    public function addOrChange(?array $attributes = []): self
+    {
+        $this->updateOrCreate($attributes);
         return $this;
     }
-
 }

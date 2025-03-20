@@ -1,9 +1,7 @@
 <?php
 
-namespace Zahzah\ModuleSummary;
+namespace Hanafalah\ModuleSummary;
 
-use Zahzah\ModuleSummary\Supports\BaseModuleSummary;
+use Hanafalah\ModuleSummary\Supports\BaseModuleSummary;
 
-class ModuleSummary extends BaseModuleSummary{
-    
-}
+class ModuleSummary extends BaseModuleSummary {}

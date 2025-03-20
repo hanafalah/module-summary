@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-use Zahzah\ModuleSummary\Models as ModuleSummaryModels;
-use Zahzah\ModuleSummary\Commands as ModuleSummaryCommands;
+use Hanafalah\ModuleSummary\Models as ModuleSummaryModels;
+use Hanafalah\ModuleSummary\Commands as ModuleSummaryCommands;
 
 return [
     'commands' => [
