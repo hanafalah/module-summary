@@ -5,7 +5,7 @@ namespace Hanafalah\ModuleSummary\Schemas;
 use Hanafalah\ModuleSummary\{
     Supports\BaseModuleSummary
 };
-use Hanafalah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\Supports\DataManagement;
 
 class Summary extends BaseModuleSummary implements DataManagement
 {

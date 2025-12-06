@@ -20,14 +20,14 @@ class Summary extends BaseModel
     protected $list      = ['id', 'parent_id', 'reference_type', 'reference_id', 'props'];
     protected $show      = ['parent_id'];
 
-    public function toViewApi()
+    public function getViewResource()
     {
-        return new ViewSummary($this);
+        return ViewSummary::class;
     }
 
-    public function toShowApi()
+    public function getShowResource()
     {
-        return new ShowSummary($this);
+        return ShowSummary::class;
     }
 
     public function reference()

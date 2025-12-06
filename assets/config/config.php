@@ -1,15 +1,32 @@
 <?php
 
-use Hanafalah\ModuleSummary\Models as ModuleSummaryModels;
 use Hanafalah\ModuleSummary\Commands as ModuleSummaryCommands;
 
 return [
-    'commands' => [
-        ModuleSummaryCommands\InstallMakeCommand::class
+    'namespace' => 'Hanafalah\\ModuleSummary',
+    'app' => [
+        'contracts' => [
+            //ADD YOUR CONTRACTS HERE
+        ],
+    ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts',
+        'schema' => 'Schemas',
+        'database' => 'Database',
+        'data' => 'Data',
+        'resource' => 'Resources',
+        'migration' => '../assets/database/migrations'
+    ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts'
     ],
     'database' => [
         'models' => [
-            'Summary'  => ModuleSummaryModels\Summary\Summary::class,
         ]
+    ],
+    'commands' => [
+        ModuleSummaryCommands\InstallMakeCommand::class
     ]
 ];

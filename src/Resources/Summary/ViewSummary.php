@@ -14,7 +14,7 @@ class ViewSummary extends ApiResource
             'id'             => $this->id,
             'reference_type' => $this->reference_type,
             'reference'      => $this->relationValidation('reference', function () {
-                return $this->reference->toViewApi();
+                return $this->reference->toViewApi()->resolve();
             }),
             'group_summary_id' => $this->group_summary_id
         ];

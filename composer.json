@@ -11,16 +11,9 @@
             "email": "hamzahnafalah@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hanafalah\\ModuleSummary\\ModuleSummaryServiceProvider"
-            ]
-        }
-    },
     "require": {
-        "hanafalah/laravel-has-props": "2.x",
-        "hanafalah/laravel-support": "2.x"
+        "hanafalah/laravel-has-props": "dev-main",
+        "hanafalah/laravel-support": "dev-main"
     },
     "minimum-stability": "dev",
     "prefer-stable": false
